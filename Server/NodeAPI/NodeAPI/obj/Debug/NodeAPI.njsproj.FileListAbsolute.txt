@@ -1,0 +1,3 @@
+C:\GitHub\PROYECTO-III-GOT\Server\NodeAPI\NodeAPI\obj\Debug\NodeAPI.njsprojAssemblyReference.cache
+C:\GitHub\PROYECTO-III-GOT\Server\NodeAPI\NodeAPI\obj\Debug\NodeAPI.njsproj.CoreCompileInputs.cache
+C:\GitHub\PROYECTO-III-GOT\Server\NodeAPI\NodeAPI\bin\Microsoft.NodejsTools.WebRole.dll
