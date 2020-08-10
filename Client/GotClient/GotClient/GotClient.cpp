@@ -6,6 +6,10 @@
 #include <iomanip>
 
 void menu();
+std::string phase1 = "";
+std::string phase2 = "";
+std::string phase3 = "";
+std::string phase4 = "";
 
 int main()
 {
@@ -21,7 +25,72 @@ int main()
 enum string_code {
 	help,
 	init,
+	invalid,
 };
+
+string_code newconversion(std::string command) {
+	std::string word = "";
+	int y = 0;
+	phase1 = "";
+	phase2 = "";
+	phase3 = "";
+	phase4 = "";
+	for (auto x : command) {
+		//std::cout << "For :: y = " << y << std::endl;
+		if (x == ' ') {
+			switch (y)
+			{
+			case 0:
+				phase1 = word;
+				word = "";
+				y++;
+				break;
+			case 1:
+				phase2 = word;
+				word = "";
+				y++;
+				break;
+			case 2:
+				phase3 = word;
+				word = "";
+				y++;
+				break;
+			case 3:
+				phase4 = word;
+				word = "";
+				y++;
+			default:
+				break;
+			}
+		}
+		else
+		{
+			word = word + x;
+		}
+	}
+	switch (y)
+	{
+	case 0:
+		phase1 = word;
+	case 1:
+		phase2 = word;
+	case 2:
+		phase3 = word;
+	case 3:
+		phase4 = word;
+	default:
+		break;
+	}
+	if (y >= 1) {
+		if (phase2 == "help") return help;
+		if (phase2 == "init") return init;
+	}
+	else {
+		return invalid;
+	}
+	std::cout << phase1 << phase2 << phase3 << phase4<< std::endl;
+}
+
 
 string_code coversion(std::string command) {
 	if (command == "got <help>") return help;
@@ -32,7 +101,7 @@ void menu() {
 	std::string command;
 	std::getline(std::cin, command);
 	//std::cout << "Command you entered: " << command <<"\n";
-	switch (coversion(command))
+	switch (newconversion(command))
 	{
 	case help:
 		system("cls");
@@ -50,6 +119,7 @@ void menu() {
 		break;
 	case init:
 		std::cout << "init  \n";
+
 		break;
 	default:
 		std::cout << "default \n";
