@@ -1,5 +1,6 @@
 #include "main.h"
 #include "command.h"
+#include "aux_task.h"
 
 int main() {
 	GotClient client;
@@ -8,12 +9,13 @@ int main() {
 
 GotClient::GotClient()
 {
-
+	//Default constructor
 }
 
 void GotClient::main()
  {	
 	Command command;
+	Aux aux;
 	std::cout << "Bienvenido a GOT v0.1.\n";
 	std::cout << "Ingrese \"got help\" para mas informacion. \n> ";
 	int x = 1;
@@ -21,13 +23,13 @@ void GotClient::main()
 	{
 		std::string inputcommand;
 		std::getline(std::cin, inputcommand);
-		switch (newconversion(inputcommand))
+		switch (aux.command_detector(inputcommand))
 		{
-		case help:
+		case aux.help:
 			command.help();
 			break;
-		case init:
-			command.init(phase3);
+		case aux.init:
+			command.init(aux.phase3);
 			break;
 		default:
 			std::cout << "default \n";
