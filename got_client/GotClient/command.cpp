@@ -20,5 +20,11 @@ void Command::help()
 void Command::init(std::string name)
 {
 	system("cls");
-	std::cout << "Se instancio un nuevo repositorio ["<<name<<"]";
+	if (name == "") {
+		std::cout << "No se permite crear repositorios sin nombre. Para obtener mas informacion acerca de un comando especifico, escriba \"got help <comando>\" \n";
+	}
+	else {
+		std::cout << "Se instancio un nuevo repositorio [" << name << "]";
+	}
+	
 }
