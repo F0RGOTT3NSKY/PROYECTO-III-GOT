@@ -84,9 +84,19 @@ string_code newconversion(std::string inputcommand) {
 	case 1:
 		phase2 = word;
 	case 2:
-		phase3 = word;
+		if (word == phase2) {
+			phase3 = "";
+		}
+		else {
+			phase3 = word;
+		}	
 	case 3:
-		phase4 = word;
+		if (word == phase3) {
+			phase4 = "";
+		}
+		else {
+			phase4 = word;
+		}
 	default:
 		break;
 	}

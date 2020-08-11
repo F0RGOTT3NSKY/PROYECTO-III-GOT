@@ -1,3 +1,5 @@
-﻿  main.cpp
-C:\GitHub\PROYECTO-III-GOT\got_client\GotClient\main.h(101): warning C4715: 'newconversion': no todas las rutas de acceso de control devuelven un valor
+﻿  command.cpp
+  main.cpp
+  Generando código...
+C:\GitHub\PROYECTO-III-GOT\got_client\GotClient\main.h(111): warning C4715: 'newconversion': no todas las rutas de acceso de control devuelven un valor
   GotClient.vcxproj -> C:\GitHub\PROYECTO-III-GOT\got_client\Debug\GotClient.exe
