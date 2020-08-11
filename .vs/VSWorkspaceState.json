@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Server\\NodeAPI"
   ],
+  "SelectedNode": "\\Server",
   "PreviewInSolutionExplorer": false
 }
