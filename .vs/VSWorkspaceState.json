@@ -1,8 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Server\\NodeAPI"
+    "\\got_client",
+    "\\got_client\\Debug",
+    "\\got_client\\GotClient",
+    "\\Server\\NodeAPI",
+    "\\Server\\NodeAPI\\NodeAPI",
+    "\\Server\\NodeAPI\\NodeAPI\\obj",
+    "\\Server\\NodeAPI\\NodeAPI\\obj\\Release"
   ],
-  "SelectedNode": "\\Server",
+  "SelectedNode": "\\got_client\\GotClient.sln",
   "PreviewInSolutionExplorer": false
 }
