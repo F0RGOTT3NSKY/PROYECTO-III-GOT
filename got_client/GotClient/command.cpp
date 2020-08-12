@@ -1,4 +1,5 @@
 #include "command.h"
+#include "aux_task.h"
 
 Command::Command() 
 {
@@ -6,10 +7,9 @@ Command::Command()
 }
 void Command::help() 
 {
-	system("cls");
 	std::cout << "Para obtener mas informacion acerca de un comando especifico, escriba \"got help <comando>\" \n\n";
 	std::cout << "init" << "\t\t" << "Instancia un nuevo repositorio en el servidor.\n";
-	std::cout << "help" << "\t\t" << "Muestra en la consola informacion de lo que hace cada comando en GOT.\n";
+	std::cout << "help" << "\t\t" << "Proporciona informacion de ayuda para los comandos de Got.\n";
 	std::cout << "add" << "\t\t" << "Permite agregar todos los archivos que no esten registrados o que tengan nuevos cambios al repositorio.\n";
 	std::cout << "commit" << "\t\t" << "Envia los archivos agregados y pendientes de commit al server.\n";
 	std::cout << "status" << "\t\t" << "Muestra cuales archivos han sido cambiados, agregados o eliminados de acuerdo al commit anterior.\n";
@@ -21,7 +21,32 @@ void Command::help()
 }
 void Command::help_command(std::string command)
 {
-	system("cls");
+	Aux aux;
+	switch (aux.command_detector(command))
+	{
+	case aux.init:
+		
+		break;
+	case aux.help:
+		std::cout << "\nProporciona informacion de ayuda para los comandos de Got.\n\n";
+		std::cout << "got help <comando>\n\n";
+		std::cout << "comando - Muestra informacion de ayuda del comando especificado.\n\n";
+		break;
+	case aux.add:
+		break;
+	case aux.commit:
+		break;
+	case aux.status:
+		break;
+	case aux.rollback:
+		break;
+	case aux.reset:
+		break;
+	case aux.sync:
+		break;
+	default:
+		break;
+	}
 
 }
 void Command::init(std::string name)

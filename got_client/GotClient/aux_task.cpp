@@ -4,76 +4,106 @@ Aux::Aux()
 {
 	//Default constructor
 }
-Aux::string_code Aux::command_detector(std::string inputcommand)
+Aux::string_code Aux::command_detection(std::string inputcommand) 
 {
-	std::string word = "";
-	int y = 0;
-	phase1 = "";
-	phase2 = "";
-	phase3 = "";
-	phase4 = "";
-	for (auto x : inputcommand) {
-		//std::cout << "For :: y = " << y << std::endl;
-		if (x == ' ') {
-			switch (y)
-			{
-			case 0:
-				phase1 = word;
-				word = "";
-				y++;
-				break;
-			case 1:
-				phase2 = word;
-				word = "";
-				y++;
-				break;
-			case 2:
-				phase3 = word;
-				word = "";
-				y++;
-				break;
-			case 3:
-				phase4 = word;
-				word = "";
-				y++;
-			default:
+	if (inputcommand != "") 
+	{
+		std::string::iterator x;
+		int phase = 1;
+		phase1 = "";
+		phase2 = "";
+		phase3 = "";
+		phase4 = "";
+		std::string command = "";
+		for (x = inputcommand.begin(); x < inputcommand.end(); x++)
+		{
+			if (*x == ' ') {
+				//std::cout << command << "\n";
+				//std::cout << "espacio\n";
+				switch (phase)
+				{
+				case 1:
+					phase1 = command;
+					phase++;
+					command = "";
+					break;
+				case 2:
+					phase2 = command;
+					phase++;
+					command = "";
+					break;
+				case 3:
+					phase3 = command;
+					phase++;
+					command = "";
+					break;
+				case 4:
+					phase4 = command;
+					phase++;
+					command = "";
+					break;
+				default:
+					if (command != "") {
+						phase1 = "";
+						phase++;
+						command = "";
+						break;
+					}			
+					break;
+				}
+			}
+			else {
+				//std::cout << *x << "\n";
+				command = command + *x;
+			}	
+		}
+		//std::cout << command << "\n";
+		switch (phase)
+		{
+		case 1:
+			phase1 = command;
+			command = "";
+			break;
+		case 2:
+			phase2 = command;
+			command = "";
+			break;
+		case 3:
+			phase3 = command;
+			command = "";
+			break;
+		case 4:
+			phase4 = command;
+			command = "";
+			break;
+		default:
+			if (command != "") {
+				phase1 = "";
+				phase++;
+				command = "";
 				break;
 			}
+			break;
 		}
-		else
-		{
-			word = word + x;
-		}
-	}
-	switch (y)
-	{
-	case 0:
-		phase1 = word;
-	case 1:
-		phase2 = word;
-	case 2:
-		if (word == phase2) {
-			phase3 = "";
-		}
-		else {
-			phase3 = word;
-		}
-	case 3:
-		if (word == phase3) {
-			phase4 = "";
-		}
-		else {
-			phase4 = word;
-		}
-	default:
-		break;
-	}
-	if (y >= 1) {
-		if (phase2 == "help") return help;
-		if (phase2 == "help" && phase3 != "") return help_command;
+		//std::cout << "Phase_1 = " << phase1 << "\nPhase_2 = " << phase2 << "\nPhase_3 = " << phase3 << "\nPhase_4 = " << phase4 << "\n";
+		if (phase1 == "got" && phase2 == "help" && phase3 == "") return help;
+		if (phase1 == "got" && phase2 == "help" && phase3 != "") return help_command;
 		if (phase2 == "init") return init;
+		else return invalid;
 	}
-	else {
+	else 
+	{
 		return invalid;
 	}
+}
+Aux::string_code Aux::command_detector(std::string inputcommand) {
+	if (inputcommand == "help") return help;
+	if (inputcommand == "init") return init;
+	if (inputcommand == "add") return add;
+	if (inputcommand == "commit") return commit;
+	if (inputcommand == "status") return status;
+	if (inputcommand == "rollback") return rollback;
+	if (inputcommand == "reset") return reset;
+	if (inputcommand == "sync") return sync;
+	else return invalid;
 }

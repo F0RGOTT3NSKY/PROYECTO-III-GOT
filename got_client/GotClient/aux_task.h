@@ -33,6 +33,7 @@ public:
 	@param string inputcommand
 	@return enum string_code
 	*/
+	string_code command_detection(std::string inputcommand);
 	string_code command_detector(std::string inputcommand);
 
 
