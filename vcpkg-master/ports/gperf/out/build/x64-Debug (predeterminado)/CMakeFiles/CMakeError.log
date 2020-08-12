@@ -1,0 +1,14 @@
+Performing C++ SOURCE FILE Test HAVE_DYNAMIC_ARRAY failed with the following output:
+Change Dir: C:/GitHub/PROYECTO-III-GOT/vcpkg-master/ports/gperf/out/build/x64-Debug (predeterminado)/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_796d2 && [1/2] Building CXX object CMakeFiles\cmTC_796d2.dir\src.cxx.obj
+FAILED: CMakeFiles/cmTC_796d2.dir/src.cxx.obj 
+C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc -DHAVE_DYNAMIC_ARRAY /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_796d2.dir\src.cxx.obj /FdCMakeFiles\cmTC_796d2.dir\ /FS -c src.cxx
+src.cxx(1): error C2131: la expresión no se evaluó como una constante
+src.cxx(1): note: el error se debió a una lectura de una variable fuera de su duración
+src.cxx(1): note: consulte el uso de 'n'
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+int main(int n) { int dynamic_array[n]; }

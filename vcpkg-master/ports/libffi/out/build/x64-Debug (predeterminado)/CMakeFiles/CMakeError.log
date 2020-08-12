@@ -1,0 +1,46 @@
+Checking whether the ASM compiler is GNU using "--version" did not match "(GNU assembler)|(GCC)|(Free Software Foundation)":
+Compilador de optimización de C/C++ de Microsoft (R) versión 19.27.29111 para x64
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : Línea de comandos warning D9002 : se omite la opción desconocida '--version'
+cl : Línea de comandos error D8003 : falta el nombre del archivo de código fuente
+Checking whether the ASM compiler is Clang using "--version" did not match "(clang version)":
+Compilador de optimización de C/C++ de Microsoft (R) versión 19.27.29111 para x64
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : Línea de comandos warning D9002 : se omite la opción desconocida '--version'
+cl : Línea de comandos error D8003 : falta el nombre del archivo de código fuente
+Checking whether the ASM compiler is AppleClang using "--version" did not match "(Apple LLVM version)":
+Compilador de optimización de C/C++ de Microsoft (R) versión 19.27.29111 para x64
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : Línea de comandos warning D9002 : se omite la opción desconocida '--version'
+cl : Línea de comandos error D8003 : falta el nombre del archivo de código fuente
+Checking whether the ASM compiler is ARMClang using "--version" did not match "armclang":
+Compilador de optimización de C/C++ de Microsoft (R) versión 19.27.29111 para x64
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : Línea de comandos warning D9002 : se omite la opción desconocida '--version'
+cl : Línea de comandos error D8003 : falta el nombre del archivo de código fuente
+Checking whether the ASM compiler is HP using "-V" did not match "HP C":
+Compilador de optimización de C/C++ de Microsoft (R) versión 19.27.29111 para x64
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : Línea de comandos error D8004 : '/V' requiere un argumento
+Checking whether the ASM compiler is Intel using "--version" did not match "(ICC)":
+Compilador de optimización de C/C++ de Microsoft (R) versión 19.27.29111 para x64
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : Línea de comandos warning D9002 : se omite la opción desconocida '--version'
+cl : Línea de comandos error D8003 : falta el nombre del archivo de código fuente
+Checking whether the ASM compiler is SunPro using "-V" did not match "Sun C":
+Compilador de optimización de C/C++ de Microsoft (R) versión 19.27.29111 para x64
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : Línea de comandos error D8004 : '/V' requiere un argumento
+Checking whether the ASM compiler is XL using "-qversion" did not match "XL C":
+Compilador de optimización de C/C++ de Microsoft (R) versión 19.27.29111 para x64
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+cl : Línea de comandos warning D9002 : se omite la opción desconocida '-qversion'
+cl : Línea de comandos error D8003 : falta el nombre del archivo de código fuente

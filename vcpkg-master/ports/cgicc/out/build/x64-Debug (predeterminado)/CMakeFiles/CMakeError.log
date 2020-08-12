@@ -1,0 +1,133 @@
+Determining if files dlfcn.h exist failed with the following output:
+Change Dir: C:/GitHub/PROYECTO-III-GOT/vcpkg-master/ports/cgicc/out/build/x64-Debug (predeterminado)/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_d9baa && [1/2] Building C object CMakeFiles\cmTC_d9baa.dir\HAVE_DLFCN_H.c.obj
+FAILED: CMakeFiles/cmTC_d9baa.dir/HAVE_DLFCN_H.c.obj 
+C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_d9baa.dir\HAVE_DLFCN_H.c.obj /FdCMakeFiles\cmTC_d9baa.dir\ /FS -c "C:\GitHub\PROYECTO-III-GOT\vcpkg-master\ports\cgicc\out\build\x64-Debug (predeterminado)\CMakeFiles\CheckIncludeFiles\HAVE_DLFCN_H.c"
+C:\GitHub\PROYECTO-III-GOT\vcpkg-master\ports\cgicc\out\build\x64-Debug (predeterminado)\CMakeFiles\CheckIncludeFiles\HAVE_DLFCN_H.c(2): fatal error C1083: No se puede abrir el archivo incluir: 'dlfcn.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <dlfcn.h>
+
+
+int main(void){return 0;}
+
+Determining if the gettimeofday exist failed with the following output:
+Change Dir: C:/GitHub/PROYECTO-III-GOT/vcpkg-master/ports/cgicc/out/build/x64-Debug (predeterminado)/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_3af9e && [1/2] Building C object CMakeFiles\cmTC_3af9e.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_3af9e.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_3af9e.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_3af9e.dir\ /FS -c CheckSymbolExists.c
+CheckSymbolExists.c(2): fatal error C1083: No se puede abrir el archivo incluir: 'sys/time.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+File C:/GitHub/PROYECTO-III-GOT/vcpkg-master/ports/cgicc/out/build/x64-Debug (predeterminado)/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/time.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef gettimeofday
+  return ((int*)(&gettimeofday))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if files strings.h exist failed with the following output:
+Change Dir: C:/GitHub/PROYECTO-III-GOT/vcpkg-master/ports/cgicc/out/build/x64-Debug (predeterminado)/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_9e714 && [1/2] Building C object CMakeFiles\cmTC_9e714.dir\HAVE_STRINGS_H.c.obj
+FAILED: CMakeFiles/cmTC_9e714.dir/HAVE_STRINGS_H.c.obj 
+C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3 -DHAVE_NAMESPACES /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_9e714.dir\HAVE_STRINGS_H.c.obj /FdCMakeFiles\cmTC_9e714.dir\ /FS -c "C:\GitHub\PROYECTO-III-GOT\vcpkg-master\ports\cgicc\out\build\x64-Debug (predeterminado)\CMakeFiles\CheckIncludeFiles\HAVE_STRINGS_H.c"
+C:\GitHub\PROYECTO-III-GOT\vcpkg-master\ports\cgicc\out\build\x64-Debug (predeterminado)\CMakeFiles\CheckIncludeFiles\HAVE_STRINGS_H.c(2): fatal error C1083: No se puede abrir el archivo incluir: 'strings.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <strings.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/time.h exist failed with the following output:
+Change Dir: C:/GitHub/PROYECTO-III-GOT/vcpkg-master/ports/cgicc/out/build/x64-Debug (predeterminado)/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_f91ff && [1/2] Building C object CMakeFiles\cmTC_f91ff.dir\HAVE_SYS_TIME_H.c.obj
+FAILED: CMakeFiles/cmTC_f91ff.dir/HAVE_SYS_TIME_H.c.obj 
+C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3 -DHAVE_NAMESPACES /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_f91ff.dir\HAVE_SYS_TIME_H.c.obj /FdCMakeFiles\cmTC_f91ff.dir\ /FS -c "C:\GitHub\PROYECTO-III-GOT\vcpkg-master\ports\cgicc\out\build\x64-Debug (predeterminado)\CMakeFiles\CheckIncludeFiles\HAVE_SYS_TIME_H.c"
+C:\GitHub\PROYECTO-III-GOT\vcpkg-master\ports\cgicc\out\build\x64-Debug (predeterminado)\CMakeFiles\CheckIncludeFiles\HAVE_SYS_TIME_H.c(2): fatal error C1083: No se puede abrir el archivo incluir: 'sys/time.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <sys/time.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/utsname.h exist failed with the following output:
+Change Dir: C:/GitHub/PROYECTO-III-GOT/vcpkg-master/ports/cgicc/out/build/x64-Debug (predeterminado)/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_506af && [1/2] Building C object CMakeFiles\cmTC_506af.dir\HAVE_SYS_UTSNAME_H.c.obj
+FAILED: CMakeFiles/cmTC_506af.dir/HAVE_SYS_UTSNAME_H.c.obj 
+C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3 -DHAVE_NAMESPACES /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_506af.dir\HAVE_SYS_UTSNAME_H.c.obj /FdCMakeFiles\cmTC_506af.dir\ /FS -c "C:\GitHub\PROYECTO-III-GOT\vcpkg-master\ports\cgicc\out\build\x64-Debug (predeterminado)\CMakeFiles\CheckIncludeFiles\HAVE_SYS_UTSNAME_H.c"
+C:\GitHub\PROYECTO-III-GOT\vcpkg-master\ports\cgicc\out\build\x64-Debug (predeterminado)\CMakeFiles\CheckIncludeFiles\HAVE_SYS_UTSNAME_H.c(2): fatal error C1083: No se puede abrir el archivo incluir: 'sys/utsname.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <sys/utsname.h>
+
+
+int main(void){return 0;}
+
+Determining if the uname exist failed with the following output:
+Change Dir: C:/GitHub/PROYECTO-III-GOT/vcpkg-master/ports/cgicc/out/build/x64-Debug (predeterminado)/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_451e6 && [1/2] Building C object CMakeFiles\cmTC_451e6.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_451e6.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3 -DHAVE_NAMESPACES /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_451e6.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_451e6.dir\ /FS -c CheckSymbolExists.c
+CheckSymbolExists.c(2): fatal error C1083: No se puede abrir el archivo incluir: 'sys/utsname.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+File C:/GitHub/PROYECTO-III-GOT/vcpkg-master/ports/cgicc/out/build/x64-Debug (predeterminado)/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/utsname.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef uname
+  return ((int*)(&uname))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if files unistd.h exist failed with the following output:
+Change Dir: C:/GitHub/PROYECTO-III-GOT/vcpkg-master/ports/cgicc/out/build/x64-Debug (predeterminado)/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_58fe2 && [1/2] Building C object CMakeFiles\cmTC_58fe2.dir\HAVE_UNISTD_H.c.obj
+FAILED: CMakeFiles/cmTC_58fe2.dir/HAVE_UNISTD_H.c.obj 
+C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3 -DHAVE_NAMESPACES /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_58fe2.dir\HAVE_UNISTD_H.c.obj /FdCMakeFiles\cmTC_58fe2.dir\ /FS -c "C:\GitHub\PROYECTO-III-GOT\vcpkg-master\ports\cgicc\out\build\x64-Debug (predeterminado)\CMakeFiles\CheckIncludeFiles\HAVE_UNISTD_H.c"
+C:\GitHub\PROYECTO-III-GOT\vcpkg-master\ports\cgicc\out\build\x64-Debug (predeterminado)\CMakeFiles\CheckIncludeFiles\HAVE_UNISTD_H.c(2): fatal error C1083: No se puede abrir el archivo incluir: 'unistd.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <unistd.h>
+
+
+int main(void){return 0;}
+
