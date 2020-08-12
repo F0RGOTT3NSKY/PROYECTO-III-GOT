@@ -1,0 +1,61 @@
+Determining if the include file dlfcn.h exists failed with the following output:
+Change Dir: C:/GitHub/PROYECTO-III-GOT/vcpkg-master/ports/libdatrie/out/build/x64-Debug (predeterminado)/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_549f5 && [1/2] Building C object CMakeFiles\cmTC_549f5.dir\CheckIncludeFile.c.obj
+FAILED: CMakeFiles/cmTC_549f5.dir/CheckIncludeFile.c.obj 
+C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_549f5.dir\CheckIncludeFile.c.obj /FdCMakeFiles\cmTC_549f5.dir\ /FS -c CheckIncludeFile.c
+CheckIncludeFile.c(1): fatal error C1083: No se puede abrir el archivo incluir: 'dlfcn.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the include file strings.h exists failed with the following output:
+Change Dir: C:/GitHub/PROYECTO-III-GOT/vcpkg-master/ports/libdatrie/out/build/x64-Debug (predeterminado)/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_3e75e && [1/2] Building C object CMakeFiles\cmTC_3e75e.dir\CheckIncludeFile.c.obj
+FAILED: CMakeFiles/cmTC_3e75e.dir/CheckIncludeFile.c.obj 
+C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_3e75e.dir\CheckIncludeFile.c.obj /FdCMakeFiles\cmTC_3e75e.dir\ /FS -c CheckIncludeFile.c
+CheckIncludeFile.c(1): fatal error C1083: No se puede abrir el archivo incluir: 'strings.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the include file unistd.h exists failed with the following output:
+Change Dir: C:/GitHub/PROYECTO-III-GOT/vcpkg-master/ports/libdatrie/out/build/x64-Debug (predeterminado)/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_e9a2d && [1/2] Building C object CMakeFiles\cmTC_e9a2d.dir\CheckIncludeFile.c.obj
+FAILED: CMakeFiles/cmTC_e9a2d.dir/CheckIncludeFile.c.obj 
+C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_e9a2d.dir\CheckIncludeFile.c.obj /FdCMakeFiles\cmTC_e9a2d.dir\ /FS -c CheckIncludeFile.c
+CheckIncludeFile.c(1): fatal error C1083: No se puede abrir el archivo incluir: 'unistd.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the function nl_langinfo exists failed with the following output:
+Change Dir: C:/GitHub/PROYECTO-III-GOT/vcpkg-master/ports/libdatrie/out/build/x64-Debug (predeterminado)/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_47c82 && [1/2] Building C object CMakeFiles\cmTC_47c82.dir\CheckFunctionExists.c.obj
+[2/2] Linking C executable cmTC_47c82.exe
+FAILED: cmTC_47c82.exe 
+cmd.exe /C "cd . && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_47c82.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_47c82.dir\CheckFunctionExists.c.obj  /out:cmTC_47c82.exe /implib:cmTC_47c82.lib /pdb:cmTC_47c82.pdb /version:0.0  /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_47c82.dir\CheckFunctionExists.c.obj /out:cmTC_47c82.exe /implib:cmTC_47c82.lib /pdb:cmTC_47c82.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_47c82.dir/intermediate.manifest CMakeFiles\cmTC_47c82.dir/manifest.res" failed (exit code 1120) with the following output:
+CheckFunctionExists.c.obj : error LNK2019: símbolo externo nl_langinfo sin resolver al que se hace referencia en la función main
+cmTC_47c82.exe : fatal error LNK1120: 1 externos sin resolver
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the function locale_charset exists failed with the following output:
+Change Dir: C:/GitHub/PROYECTO-III-GOT/vcpkg-master/ports/libdatrie/out/build/x64-Debug (predeterminado)/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_366da && [1/2] Building C object CMakeFiles\cmTC_366da.dir\CheckFunctionExists.c.obj
+[2/2] Linking C executable cmTC_366da.exe
+FAILED: cmTC_366da.exe 
+cmd.exe /C "cd . && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_366da.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_366da.dir\CheckFunctionExists.c.obj  /out:cmTC_366da.exe /implib:cmTC_366da.lib /pdb:cmTC_366da.pdb /version:0.0  /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx64\x64\link.exe /nologo CMakeFiles\cmTC_366da.dir\CheckFunctionExists.c.obj /out:cmTC_366da.exe /implib:cmTC_366da.lib /pdb:cmTC_366da.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_366da.dir/intermediate.manifest CMakeFiles\cmTC_366da.dir/manifest.res" failed (exit code 1120) with the following output:
+CheckFunctionExists.c.obj : error LNK2019: símbolo externo locale_charset sin resolver al que se hace referencia en la función main
+cmTC_366da.exe : fatal error LNK1120: 1 externos sin resolver
+ninja: build stopped: subcommand failed.
+
+
+
