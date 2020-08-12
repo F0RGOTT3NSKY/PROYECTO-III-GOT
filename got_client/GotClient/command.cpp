@@ -1,5 +1,6 @@
 #include "command.h"
 #include "aux_task.h"
+#include "cpr/cpr.h"
 
 Command::Command() 
 {
