@@ -28,23 +28,47 @@ void Command::help_command(std::string command)
 		
 		break;
 	case aux.help:
-		std::cout << "\nProporciona informacion de ayuda para los comandos de Got.\n\n";
+		std::cout << "Proporciona informacion de ayuda para los comandos de Got.\n\n";
 		std::cout << "got help <comando>\n\n";
-		std::cout << "comando - Muestra informacion de ayuda del comando especificado.\n\n";
+		std::cout << "     comando\tMuestra informacion de ayuda del comando especificado.\n\n";
 		break;
 	case aux.add:
+		std::cout << "Permite agregar todos los archivos que no esten registrados  o que tengan nuevos cambios al repositorio.\n";
+		std::cout << "Ignora los archivos que esten configurados en .gotignore.\n";
+		std::cout << "Cuando los archivos se agregan, se marcan como pendientes de commit.\n\n";
+		std::cout << "got add <parametro>\n\n";
+		std::cout << "     -A     \tAgrega todos los archivos relevantes.\n";
+		std::cout << "     name\tAgrega un archivo segun el nombre indicado.\n";
 		break;
 	case aux.commit:
+		std::cout << "Permite enviar los archivos agregados y pendientes de commit al server.\n";
+		std::cout << "Se debe especificar un mensaje a la hora de hacer el commit.\n";
+		std::cout << "El server recibe los cambios, y cuando este proceso ha terminado de procesar los cambios,\n";
+		std::cout << "retorna un id de commit al cliente generado con MD5.\n\n";
+		std::cout << "got commit <mensaje>\n\n";
+		std::cout << "     mensaje\tEspecifica la etiqueta del commit.\n\n";
+		std::cout << "El server verifica si el commit esta al dia con el resto de cambios realizados por otros usuarios.\n";
+		std::cout << "En caso que no sea asi, se rechaza el commit.\n\n";
 		break;
 	case aux.status:
+		std::cout << "Muestra cuales archivos han sido cambiados, agregados o eliminados de acuerdo al commit anterior.\n";
+		std::cout << "Si se especifica un archivo en especifico, muestra el historial de cambios, recuperando el historial de\n";
+		std::cout << "cambios desde el server.\n\n";
+		std::cout << "got status <file>\n\n";
+		std::cout << "     file\tNombre del archivo.\n\n";
 		break;
 	case aux.rollback:
+		std::cout << "Permite regresar un archivo en el tiempo a un commit en especifico.\n\n";
+		std::cout << "got  rollback <file> <commit>\n\n";
+		std::cout << "     file\t";
+
 		break;
 	case aux.reset:
 		break;
 	case aux.sync:
 		break;
 	default:
+		std::cout << "El programa de ayuda no admite este comando. Pruebe con" <<"\033[33m" <<" got help "<< "\033[0m" << "para ver los comandos disponibles.\n";
 		break;
 	}
 

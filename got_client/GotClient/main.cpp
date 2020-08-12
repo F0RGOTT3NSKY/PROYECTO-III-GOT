@@ -16,13 +16,11 @@ void GotClient::main()
  {	
 	Command command;
 	Aux aux;
-	std::cout << "Proyecto III GOT [Version 32.0.a861559.455a]\n";
-	std::cout << "TEC | 2020 ";
-	std::cout << "Ingrese \"got help\" para mas informacion. \n";
+	std::cout << "Bienvenido a Got v0.5.1 \n";
+	std::cout << "Ingrese \"got help\" para mas informacion. \n> ";
 	int x = 1;
 	while (x==1)
 	{
-		std::cout << "Sugerencia: Para ingresar un comando utilice \"got <comando>\"\n> ";
 		std::string inputcommand;
 		std::getline(std::cin, inputcommand);
 		switch (aux.command_detection(inputcommand))
