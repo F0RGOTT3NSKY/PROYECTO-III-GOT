@@ -139,10 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="aux_task.cpp" />
     <ClCompile Include="command.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="aux_task.h" />
     <ClInclude Include="command.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>

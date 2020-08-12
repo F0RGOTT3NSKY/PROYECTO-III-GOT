@@ -21,12 +21,18 @@
     <ClCompile Include="command.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="aux_task.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="command.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="aux_task.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

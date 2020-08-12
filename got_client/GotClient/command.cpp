@@ -1,6 +1,8 @@
 #include "command.h"
 
-Command::Command() {
+Command::Command() 
+{
+	//Default constructor
 }
 void Command::help() 
 {
@@ -17,6 +19,11 @@ void Command::help()
 	std::cout << "\nPara mas informacion acerca del proyecto, consulte en r3dp4r4d153.github.io/PROYECTO-III-GOT/ \n\n";
 	std::cout << "Sugerencia: Para ingresar un comando utilice \"got <comando>\"\n> ";
 }
+void Command::help_command(std::string command)
+{
+	system("cls");
+
+}
 void Command::init(std::string name)
 {
 	system("cls");
@@ -26,5 +33,9 @@ void Command::init(std::string name)
 	else {
 		std::cout << "Se instancio un nuevo repositorio [" << name << "]";
 	}
-	
+}
+void Command::add(std::string name) 
+{
+
+
 }
