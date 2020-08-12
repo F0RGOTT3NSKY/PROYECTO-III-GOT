@@ -59,14 +59,21 @@ void Command::help_command(std::string command)
 		std::cout << "     file\tNombre del archivo.\n\n";
 		break;
 	case aux.rollback:
-		std::cout << "Permite regresar un archivo en el tiempo a un commit en especifico.\n\n";
+		std::cout << "Permite regresar un archivo en el tiempo a un commit en especifico. Recuperando el archivo hasta dicha version.\n\n";
 		std::cout << "got  rollback <file> <commit>\n\n";
-		std::cout << "     file\t";
-
+		std::cout << "     file\tNombre del archivo.\n";
+		std::cout << "     commit\tNombre del commit.\n\n";
 		break;
 	case aux.reset:
+		std::cout << "Deshace cambios locales de un archivo y lo regresa al ultimo commit\n\n";
+		std::cout << "got reset <file>\n\n";
+		std::cout << "     file\tNombre del archivo.\n\n";
 		break;
 	case aux.sync:
+		std::cout << "Recupera los cambios de un archivo en el server y lo sincroniza con el archivo en el cliente.\n";
+		std::cout << "Si existen cambios locales, se permite hacer merge de los cambios.\n\n";
+		std::cout << "got sync <file>\n\n";
+		std::cout << "     file\tNombre del archivo.\n\n";
 		break;
 	default:
 		std::cout << "El programa de ayuda no admite este comando. Pruebe con" <<"\033[33m" <<" got help "<< "\033[0m" << "para ver los comandos disponibles.\n";
