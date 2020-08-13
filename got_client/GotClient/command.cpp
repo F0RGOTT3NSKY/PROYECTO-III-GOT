@@ -88,7 +88,9 @@ void Command::init(std::string name)
 		std::cout << "No se permite crear repositorios sin nombre. Para obtener mas informacion acerca de un comando especifico, escriba \"got help <comando>\" \n";
 	}
 	else {
-
+		auto r = cpr::Post(cpr::Url{ "http://localhost:80/repositorios" },
+			cpr::Body{ R"({"id":"0", "nombre": name, "arbol":"", "gotignore":"" })" },
+			cpr::Header{ { "Content-Type", "application/json" } });
 		std::cout << "Se instancio un nuevo repositorio [" << name << "]";
 	}
 }
@@ -98,15 +100,15 @@ void Command::add(std::string name)
 }
 void Command::commit(std::string mensaje) 
 {
-
+	auto r = cpr::Put(cpr::Url{ "http://localhost:80/repositorios/archivos" });
 }
 void Command::status(std::string file)
 {
-
+	auto r = cpr::Get(cpr::Url{ "http://localhost:80/repositorios/archivos" });
 }
 void Command::rollback(std::string file, std::string commit)
 {
-
+	auto r = cpr::Put(cpr::Url{ "http://localhost:80/repositorios/archivos" });
 }
 void Command::reset(std::string file)
 {
@@ -114,5 +116,5 @@ void Command::reset(std::string file)
 }
 void Command::sync(std::string file)
 {
-
+	auto r = cpr::Get(cpr::Url{ "http://localhost:80/repositorios/archivos/sync" });
 }
