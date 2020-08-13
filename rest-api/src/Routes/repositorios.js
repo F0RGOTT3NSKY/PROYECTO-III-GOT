@@ -3,6 +3,16 @@ const router = express.Router();
 
 const mysqlConnection = require('../Database');
 
+router.get('/get', (req, res) => {
+	mysqlConnection.query('SELECT * FROM repositorios', (err, rows, fields) => {
+        if(!err){
+            res.json(rows);
+        } else {
+            console.log(err);
+        }
+    });
+});
+
 router.get('/repositorios', (req, res) => {
     mysqlConnection.query('SELECT * FROM repositorios', (err, rows, fields) => {
         if(!err){
@@ -82,6 +92,11 @@ router.delete('/repositorios/:id', (req, res) => {
             console.log(err);
         }
     });
+});
+
+router.post('/archivos', (req, res) => {
+    const { id, nombre, extension, directorio, Commit, arbol, contenido } = req.body;
+    console.log(req.body);
 });
 
 module.exports = router;
