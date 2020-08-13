@@ -81,10 +81,8 @@ void Command::help_command(std::string command)
 	}
 
 }
-bool initiated = false;
 void Command::init(std::string name)
 {
-	initiated = true;
 	system("cls");
 	if (name == "") {
 		std::cout << "No se permite crear repositorios sin nombre. Para obtener mas informacion acerca de un comando especifico, escriba \"got help <comando>\" \n";
@@ -98,7 +96,8 @@ void Command::init(std::string name)
 }
 void Command::add(std::string name) 
 {
-	if (initiated == true) {
+	cpr::Response r = cpr::Get(cpr::Url{ "http://localhost:80/get" });
+	if (r.status_code >= 400) {
 	}
 	else {
 		std::cout << "Favor inicializar un repositorio, utilize el comando got init para hacerlo";
@@ -106,7 +105,8 @@ void Command::add(std::string name)
 }
 void Command::commit(std::string mensaje) 
 {
-	if (initiated == true) {
+	cpr::Response r = cpr::Get(cpr::Url{ "http://localhost:80/get" });
+	if (r.status_code >= 400) {
 		auto r = cpr::Put(cpr::Url{ "http://localhost:80/repositorios/archivos/commit" },
 			cpr::Body{ R"({"id":"0", "nombre": name, "arbol":"", "gotignore":"" })" },
 			cpr::Header{ { "Content-Type", "application/json" } });
@@ -118,7 +118,8 @@ void Command::commit(std::string mensaje)
 }
 void Command::status(std::string file)
 {
-	if (initiated == true) {
+	cpr::Response r = cpr::Get(cpr::Url{ "http://localhost:80/get" });
+	if (r.status_code >= 400) {
 		auto r = cpr::Get(cpr::Url{ "http://localhost:80/repositorios/archivos/status" });
 		std::cout << "Estos son los cambios realizados en [" << file << "]";
 	}
@@ -128,7 +129,8 @@ void Command::status(std::string file)
 }
 void Command::rollback(std::string file, std::string commit)
 {
-	if (initiated == true) {
+	cpr::Response r = cpr::Get(cpr::Url{ "http://localhost:80/get" });
+	if (r.status_code >= 400) {
 		auto r = cpr::Put(cpr::Url{ "http://localhost:80/repositorios/archivos/rollback" },
 			cpr::Body{ R"({"id":"0", "nombre": name, "arbol":"", "gotignore":"" })" },
 			cpr::Header{ { "Content-Type", "application/json" } });
@@ -140,7 +142,8 @@ void Command::rollback(std::string file, std::string commit)
 }
 void Command::reset(std::string file)
 {
-	if (initiated == true) {
+	cpr::Response r = cpr::Get(cpr::Url{ "http://localhost:80/get" });
+	if (r.status_code >= 400) {
 
 	}
 	else {
@@ -150,7 +153,8 @@ void Command::reset(std::string file)
 }
 void Command::sync(std::string file)
 {
-	if (initiated == true) {
+	cpr::Response r = cpr::Get(cpr::Url{ "http://localhost:80/get" });
+	if (r.status_code >= 400) {
 		auto r = cpr::Get(cpr::Url{ "http://localhost:80/repositorios/archivos/sync" });
 		std::cout << "Cambios sincronizados";
 	}
