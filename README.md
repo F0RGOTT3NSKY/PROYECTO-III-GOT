@@ -1,6 +1,6 @@
 # Software Necesario #
 
-Para poder acceder a este proyecto se necesita tener instalado los sigueintes softwares:
+Para poder acceder a este proyecto se necesita tener instalado los sigueintes programas:
 
 ### Visual Studio 2019 
 
@@ -62,13 +62,6 @@ Abra GitKraken y dirigase adonde dice "Clone a repo"
 
 ![GK1](https://user-images.githubusercontent.com/28927252/90084225-07c7d100-dcd2-11ea-87c5-3cb8e50ca378.PNG)
 
-
-Una vez en la ventana seleccione "GitHub.com", eliga la dirreccion en la que quiere que se clone el repositorio y luego elija el repositorio "PROYECTO-III-GOT".
+Una vez en la ventana de clonación seleccione "GitHub.com", eliga la dirreccion en la que quiere que se clone el repositorio y luego elija el repositorio "PROYECTO-III-GOT".
 
 ![GK2](https://user-images.githubusercontent.com/28927252/90084229-08606780-dcd2-11ea-82a6-aa2813358008.PNG)
-
-
-
-
-### Complementos 1 y 2
-
