@@ -12,10 +12,9 @@ Este se puede descargar desde el enlace: https://visualstudio.microsoft.com/es/d
 
 En proceso de instalaccion de Visual Studio se le pedirá que especifique los complementos que se desean instalar. Se debe asegurar de agregar:
 
-1. Desarrollo de ASP.NET  y web
+1. Desarrollo de escritorio de .NET 
 
 ![NET](https://user-images.githubusercontent.com/28927252/90084113-c20b0880-dcd1-11ea-9c6c-b6df6ee937a9.PNG)
-
 
 2. Desarrollo de Node.js
 
@@ -33,16 +32,33 @@ En proceso de instalaccion de Visual Studio se le pedirá que especifique los co
 
 ![VSE](https://user-images.githubusercontent.com/28927252/90084161-e1099a80-dcd1-11ea-9376-a53cba42f2c7.PNG)
 
+
+### MySQL
+
+Con este software se manejan las bases de datos
+
+Se puede descargar del sigueinte enlace: https://dev.mysql.com/downloads/file/?id=496745
+Una vez dentro de la pagina puede hacer click en "No thanks, just start my download" para empezar la desgarga directamente
+
+![MySQL](https://user-images.githubusercontent.com/28927252/90084787-90933c80-dcd3-11ea-9f55-503480ed25f8.PNG)
+
+Luego siga el proceso normal de instalación.
+
 ### GitKraken
 
 Este software se usa para poder clonar el repositorio más facilmente.
+
+Es necesario tener una cuenta de GitHub.
 
 Este se puede descargar en el siguiente enlace: https://www.gitkraken.com/download
 
 ![GKD](https://user-images.githubusercontent.com/28927252/90084235-0b5b5800-dcd2-11ea-87e8-ae8af5c721b4.PNG)
 
+Luego siga el proceso normal de instalación.
 
-Una vez que tenga GitKraken instalado, dirigase donde dice "Clone a repo"
+# Clonación del Repositorio#
+
+Abra GitKraken y dirigase adonde dice "Clone a repo"
 
 ![GK1](https://user-images.githubusercontent.com/28927252/90084225-07c7d100-dcd2-11ea-87c5-3cb8e50ca378.PNG)
 
