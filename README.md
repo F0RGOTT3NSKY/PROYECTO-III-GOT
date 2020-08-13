@@ -10,6 +10,8 @@ Este se puede descargar desde el enlace: https://visualstudio.microsoft.com/es/d
 
 ![VSD](https://user-images.githubusercontent.com/28927252/90082109-36db4400-dccc-11ea-9b16-b3ba33ecea25.PNG)
 
+Debe de elegir Ingles como idioma predetermiando.
+
 En proceso de instalaccion de Visual Studio se le pedirá que especifique los complementos que se desean instalar. Se debe asegurar de agregar:
 
 1. Desarrollo de escritorio de .NET 
@@ -31,6 +33,36 @@ En proceso de instalaccion de Visual Studio se le pedirá que especifique los co
 5. Desarrollo de extensiones de Visual Studio 
 
 ![VSE](https://user-images.githubusercontent.com/28927252/90084161-e1099a80-dcd1-11ea-9376-a53cba42f2c7.PNG)
+
+Una vez que se tenga Visual Studio Instalado es necesario instalar un paquete para poder instalar librerias. Para esto es necesario ingresar al siguiente enlace: https://github.com/microsoft/vcpkg
+
+Una vez en la pagina de github prescione el boton verde "Code" y seleccione "download ZIP"
+
+![VCPKG](https://user-images.githubusercontent.com/28927252/90194462-a4e34200-dd84-11ea-9294-397d03c70c8a.JPG)
+
+Una vez que tenga el zip descargado tiene que crear una carpeta en el Disco C y llamarla "Librerias" la dirrecion debe de quedarle así: "C:\Librerias" 
+
+Luego es necesario que descomprima el contenido del ZIP que descargo en la carpeta "Librerias", dejando una carpeta de nombre "vcpkg-master"
+
+Una vez que tenga lo anterior listo tiene que abrir una ventada de powershell y ubicarse en la carpeta "vcpkg-master" con los sigueintes comandos: 
+
+cd\
+
+cd C:\Librerias\vcpkg-master
+
+Unas vez dentro de la carpeta se procedera a instalar vcpkg con los siguentes comandos:
+
+.\bootstrap-vcpkg.bat
+.\vcpkg integrate install
+
+Con el vcpkg instalado ya se puede instalar la libreria cpr, la cual servira para poder realizar la conexión, esto se hace con los siguientes comandos:
+
+.\vcpkg search cpr
+Este comando buscara y comprobara que se pueda instalar la libreria
+
+.\vcpkg install cpr
+
+
 
 
 ### MySQL
