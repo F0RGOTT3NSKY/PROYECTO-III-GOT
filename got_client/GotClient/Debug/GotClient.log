@@ -1,2 +1,5 @@
-﻿  main.cpp
+﻿  aux_task.cpp
+  command.cpp
+  main.cpp
+  Generando código...
   GotClient.vcxproj -> C:\GitHub\PROYECTO-III-GOT\got_client\Debug\GotClient.exe
