@@ -1,8 +1,12 @@
 const express = require('express');
 const router = express.Router();
-
 const mysqlConnection = require('../Database');
 
+
+/**
+ * Esta funcion permite saber si existe una conexion entre el servidor y el cliente.
+ * @returns un get de los repositorios
+ */
 router.get('/get', (req, res) => {
 	mysqlConnection.query('SELECT * FROM repositorios', (err, rows, fields) => {
         if(!err){
