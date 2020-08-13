@@ -1,0 +1,136 @@
+\hypertarget{class_command}{}\doxysection{Command Class Reference}
+\label{class_command}\index{Command@{Command}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_command_a18df2d81039392daeb0b78c346a70537}{Command}} ()
+\item 
+void \mbox{\hyperlink{class_command_a5bcf25dda41e4745a3ce5ff2de6e1e07}{help}} ()
+\item 
+void \mbox{\hyperlink{class_command_ae17cb1f46e3509379c27ae4e9f359c38}{help\+\_\+command}} (std\+::string command)
+\item 
+void \mbox{\hyperlink{class_command_a43253bc8b2dd432140a4fb44658d20b9}{init}} (std\+::string name)
+\item 
+void \mbox{\hyperlink{class_command_a0b5af0bd1a9a95a0f83575334263ce4b}{add}} (std\+::string name)
+\item 
+void \mbox{\hyperlink{class_command_a06775833ad387f69f19fdb3d0bee34b6}{commit}} (std\+::string mensaje)
+\item 
+void \mbox{\hyperlink{class_command_afc8a8c7215a9486a3f1178d6bedb548d}{status}} (std\+::string file)
+\item 
+void \mbox{\hyperlink{class_command_aa09cffb95c6234f998724c3760a84ee9}{rollback}} (std\+::string file, std\+::string \mbox{\hyperlink{class_command_a06775833ad387f69f19fdb3d0bee34b6}{commit}})
+\item 
+void \mbox{\hyperlink{class_command_a523c54f142b8b03ce1e7a075ca9be2bc}{reset}} (std\+::string file)
+\item 
+void \mbox{\hyperlink{class_command_aac11e2be3bcc7e46cd4d74777cc5c80e}{sync}} (std\+::string file)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_command_a18df2d81039392daeb0b78c346a70537}\label{class_command_a18df2d81039392daeb0b78c346a70537}} 
+\index{Command@{Command}!Command@{Command}}
+\index{Command@{Command}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{Command()}{Command()}}
+{\footnotesize\ttfamily Command\+::\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_command_a0b5af0bd1a9a95a0f83575334263ce4b}\label{class_command_a0b5af0bd1a9a95a0f83575334263ce4b}} 
+\index{Command@{Command}!add@{add}}
+\index{add@{add}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Command\+::add (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+Permite agregar todos los archivos que no esten registrados o que tengan nuevos cambios al repositorio. Ignorando los archivos que esten configurados en .gotignore. 
+\begin{DoxyParams}{Parameters}
+{\em string} & name \\
+\hline
+{\em string} & -\/A \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_command_a06775833ad387f69f19fdb3d0bee34b6}\label{class_command_a06775833ad387f69f19fdb3d0bee34b6}} 
+\index{Command@{Command}!commit@{commit}}
+\index{commit@{commit}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{commit()}{commit()}}
+{\footnotesize\ttfamily void Command\+::commit (\begin{DoxyParamCaption}\item[{std\+::string}]{mensaje }\end{DoxyParamCaption})}
+
+Permite enviar los archivos agregados y pendientes de commit al server. Se debe especificar un mensaje a la hora de hacer commit. El server recibe los cambios, y cuando este proceso ha terminado de procesar los cambios, retorna un id de commit al cliente generado con M\+D5. 
+\begin{DoxyParams}{Parameters}
+{\em string} & mensaje \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_command_a5bcf25dda41e4745a3ce5ff2de6e1e07}\label{class_command_a5bcf25dda41e4745a3ce5ff2de6e1e07}} 
+\index{Command@{Command}!help@{help}}
+\index{help@{help}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{help()}{help()}}
+{\footnotesize\ttfamily void Command\+::help (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Muestra toda la informacion general de los comandos disponibles en Got. \mbox{\Hypertarget{class_command_ae17cb1f46e3509379c27ae4e9f359c38}\label{class_command_ae17cb1f46e3509379c27ae4e9f359c38}} 
+\index{Command@{Command}!help\_command@{help\_command}}
+\index{help\_command@{help\_command}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{help\_command()}{help\_command()}}
+{\footnotesize\ttfamily void Command\+::help\+\_\+command (\begin{DoxyParamCaption}\item[{std\+::string}]{command }\end{DoxyParamCaption})}
+
+Muestra la informacion en especifico de cada comando disponible en Got. \mbox{\Hypertarget{class_command_a43253bc8b2dd432140a4fb44658d20b9}\label{class_command_a43253bc8b2dd432140a4fb44658d20b9}} 
+\index{Command@{Command}!init@{init}}
+\index{init@{init}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Command\+::init (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+Instancia un nuevo repositorio en el servidor y lo identifica con el nombre indicado por $<$name$>$. 
+\begin{DoxyParams}{Parameters}
+{\em $<$name$>$} & nombre del nuevo repositorio en el servidor. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_command_a523c54f142b8b03ce1e7a075ca9be2bc}\label{class_command_a523c54f142b8b03ce1e7a075ca9be2bc}} 
+\index{Command@{Command}!reset@{reset}}
+\index{reset@{reset}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Command\+::reset (\begin{DoxyParamCaption}\item[{std\+::string}]{file }\end{DoxyParamCaption})}
+
+Deshace cambios locales de un archivo y lo regresa al ultimo commit. 
+\begin{DoxyParams}{Parameters}
+{\em string} & file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_command_aa09cffb95c6234f998724c3760a84ee9}\label{class_command_aa09cffb95c6234f998724c3760a84ee9}} 
+\index{Command@{Command}!rollback@{rollback}}
+\index{rollback@{rollback}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{rollback()}{rollback()}}
+{\footnotesize\ttfamily void Command\+::rollback (\begin{DoxyParamCaption}\item[{std\+::string}]{file,  }\item[{std\+::string}]{commit }\end{DoxyParamCaption})}
+
+Permite regresar un archivo en el tiempo a un commit en especifico. Recuperando el archivo hasta dicha version. 
+\begin{DoxyParams}{Parameters}
+{\em string} & file \\
+\hline
+{\em string} & commit \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_command_afc8a8c7215a9486a3f1178d6bedb548d}\label{class_command_afc8a8c7215a9486a3f1178d6bedb548d}} 
+\index{Command@{Command}!status@{status}}
+\index{status@{status}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{status()}{status()}}
+{\footnotesize\ttfamily void Command\+::status (\begin{DoxyParamCaption}\item[{std\+::string}]{file }\end{DoxyParamCaption})}
+
+Muestra cuales archivos han sido cambiados, agregados o eliminados de acuerdo al commit anterior. Si se especifica un archivo en especifico, muestra el historial de cambios, recuperando el historial de cambios desde el server. 
+\begin{DoxyParams}{Parameters}
+{\em string} & file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_command_aac11e2be3bcc7e46cd4d74777cc5c80e}\label{class_command_aac11e2be3bcc7e46cd4d74777cc5c80e}} 
+\index{Command@{Command}!sync@{sync}}
+\index{sync@{sync}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{sync()}{sync()}}
+{\footnotesize\ttfamily void Command\+::sync (\begin{DoxyParamCaption}\item[{std\+::string}]{file }\end{DoxyParamCaption})}
+
+Recupera los cambios de un archivo en el server y lo sincroniza con el archivo en el cliente. Si existen cambios locales, se permite hacer merge de los cambios. 
+\begin{DoxyParams}{Parameters}
+{\em string} & file \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Git\+Hub/\+P\+R\+O\+Y\+E\+C\+T\+O-\/\+I\+I\+I-\/\+G\+O\+T/got\+\_\+client/\+Got\+Client/command.\+h\item 
+C\+:/\+Git\+Hub/\+P\+R\+O\+Y\+E\+C\+T\+O-\/\+I\+I\+I-\/\+G\+O\+T/got\+\_\+client/\+Got\+Client/command.\+cpp\end{DoxyCompactItemize}
