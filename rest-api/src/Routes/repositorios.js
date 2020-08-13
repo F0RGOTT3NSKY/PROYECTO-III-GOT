@@ -24,7 +24,8 @@ router.get('/archivos', (req, res) => {
 });
 
 router.get('/repositorios/:id', (req, res) => {
-    
+    const { id } = req.params;
+    console.log(id);
 });
 
 module.exports = router;
