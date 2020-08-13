@@ -89,6 +89,7 @@ Aux::string_code Aux::command_detection(std::string inputcommand)
 		if (phase1 == "got" && phase2 == "help" && phase3 == "") return help;
 		if (phase1 == "got" && phase2 == "help" && phase3 != "") return help_command;
 		if (phase2 == "init") return init;
+		if (phase1 == "got" && phase2 == "add" && phase3 != "") return add;
 		else return invalid;
 	}
 	else 

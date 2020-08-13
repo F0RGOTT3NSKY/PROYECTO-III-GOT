@@ -34,6 +34,8 @@ void GotClient::main()
 		case aux.help_command:
 			command.help_command(aux.phase3);
 			break;
+		case aux.add:
+			command.add(aux.phase3);
 		default:
 			std::cout << "El programa no admite este comando. Pruebe con" << "\033[33m" << " got help " << "\033[0m" << "para ver los comandos disponibles.\n";
 			break;

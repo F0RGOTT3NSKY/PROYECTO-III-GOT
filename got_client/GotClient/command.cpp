@@ -101,6 +101,8 @@ void Command::add(std::string name)
 		std::cout << "Favor inicializar un repositorio, utilize el comando got init para hacerlo";
 	}
 	else {
+		std::cout << r.url << std::endl;
+		std::cout << r.text << std::endl;
 	}
 }
 
