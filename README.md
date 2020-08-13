@@ -1,6 +1,6 @@
 # Software Necesario #
 
-Primero se deben descargar e los siguientes programas:
+Para poder acceder a este proyecto se necesita tener instalado los sigueintes softwares:
 
 ### Visual Studio 2019 
 
@@ -52,7 +52,7 @@ Es necesario tener una cuenta de GitHub.
 
 Este se puede descargar en el siguiente enlace: https://www.gitkraken.com/download
 
-![GKD](https://user-images.githubusercontent.com/28927252/90084235-0b5b5800-dcd2-11ea-87e8-ae8af5c721b4.PNG)
+![GKD](https://user-images.githubusercontent.com/28927252/90085023-28912600-dcd4-11ea-8b9e-fe7753ab6933.PNG)
 
 Luego siga el proceso normal de instalación.
 
