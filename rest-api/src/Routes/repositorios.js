@@ -94,9 +94,17 @@ router.delete('/repositorios/:id', (req, res) => {
     });
 });
 
-router.post('/archivos', (req, res) => {
-    const { id, nombre, extension, directorio, Commit, arbol, contenido } = req.body;
+router.post('/archivos/commit', (req, res) => {
+    const { id, idrepo, nombre, extension, directorio, Commit, arbol, contenido } = req.body;
     console.log(req.body);
+    const query = 'CALL fileAddOrEdit(?, ?, ?, ?, ?, ?, ?, ?)';
+    mysqlConnection.query(query, [id, idrepo, nombre, extension, directorio, Commit, arbol, contenido], (err, rows, fields) => {
+        if(!err){
+            res.json({Status: 'Archivo guardado'});
+        } else {
+            console.log(err);
+        }
+    });
 });
 
 module.exports = router;
