@@ -36,6 +36,10 @@ En proceso de instalaccion de Visual Studio se le pedirá que especifique los co
 
 Una vez que se tenga Visual Studio Instalado es necesario instalar un paquete para poder instalar librerias. Para esto es necesario ingresar al siguiente enlace: https://github.com/microsoft/vcpkg
 
+### VCPCK
+
+Este paquete ayudara a instalar librerias.
+
 Una vez en la pagina de github prescione el boton verde "Code" y seleccione "download ZIP"
 
 ![VCPKG](https://user-images.githubusercontent.com/28927252/90194462-a4e34200-dd84-11ea-9294-397d03c70c8a.JPG)
@@ -61,8 +65,6 @@ Con el vcpkg instalado ya se puede instalar la libreria cpr, la cual servira par
 Este comando buscara y comprobara que se pueda instalar la libreria
 
 .\vcpkg install cpr
-
-
 
 
 ### MySQL
