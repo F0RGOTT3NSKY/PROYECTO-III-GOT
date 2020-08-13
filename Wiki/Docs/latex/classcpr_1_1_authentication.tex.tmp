@@ -1,0 +1,20 @@
+\hypertarget{classcpr_1_1_authentication}{}\doxysection{cpr\+::Authentication Class Reference}
+\label{classcpr_1_1_authentication}\index{cpr::Authentication@{cpr::Authentication}}
+
+
+Inheritance diagram for cpr\+::Authentication\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcpr_1_1_authentication_ada5e187eb4a9dbe056a9e5aa01820686}\label{classcpr_1_1_authentication_ada5e187eb4a9dbe056a9e5aa01820686}} 
+{\footnotesize template$<$typename User\+Type , typename Pass\+Type $>$ }\\{\bfseries Authentication} (User\+Type \&\&username, Pass\+Type \&\&password)
+\item 
+\mbox{\Hypertarget{classcpr_1_1_authentication_a1a41dbb2092364d1d69e6e799712fdca}\label{classcpr_1_1_authentication_a1a41dbb2092364d1d69e6e799712fdca}} 
+const char $\ast$ {\bfseries Get\+Auth\+String} () const noexcept
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Git\+Hub/\+P\+R\+O\+Y\+E\+C\+T\+O-\/\+I\+I\+I-\/\+G\+O\+T/got\+\_\+client/\+Got\+Client/cpr/auth.\+h\end{DoxyCompactItemize}
