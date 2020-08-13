@@ -1,20 +1,4 @@
 var searchData=
 [
-  ['caseinsensitivecompare_543',['CaseInsensitiveCompare',['../structcpr_1_1_case_insensitive_compare.html',1,'cpr']]],
-  ['command_544',['Command',['../class_command.html',1,'']]],
-  ['cookies_545',['Cookies',['../classcpr_1_1_cookies.html',1,'cpr']]],
-  ['curl_5fblob_546',['curl_blob',['../structcurl__blob.html',1,'']]],
-  ['curl_5fcertinfo_547',['curl_certinfo',['../structcurl__certinfo.html',1,'']]],
-  ['curl_5ffileinfo_548',['curl_fileinfo',['../structcurl__fileinfo.html',1,'']]],
-  ['curl_5fforms_549',['curl_forms',['../structcurl__forms.html',1,'']]],
-  ['curl_5fhttppost_550',['curl_httppost',['../structcurl__httppost.html',1,'']]],
-  ['curl_5fkhkey_551',['curl_khkey',['../structcurl__khkey.html',1,'']]],
-  ['curl_5fslist_552',['curl_slist',['../structcurl__slist.html',1,'']]],
-  ['curl_5fsockaddr_553',['curl_sockaddr',['../structcurl__sockaddr.html',1,'']]],
-  ['curl_5fssl_5fbackend_554',['curl_ssl_backend',['../structcurl__ssl__backend.html',1,'']]],
-  ['curl_5ftlssessioninfo_555',['curl_tlssessioninfo',['../structcurl__tlssessioninfo.html',1,'']]],
-  ['curl_5fversion_5finfo_5fdata_556',['curl_version_info_data',['../structcurl__version__info__data.html',1,'']]],
-  ['curl_5fwaitfd_557',['curl_waitfd',['../structcurl__waitfd.html',1,'']]],
-  ['curlholder_558',['CurlHolder',['../structcpr_1_1_curl_holder.html',1,'cpr']]],
-  ['curlmsg_559',['CURLMsg',['../struct_c_u_r_l_msg.html',1,'']]]
+  ['gotclient_23',['GotClient',['../class_got_client.html',1,'']]]
 ];
