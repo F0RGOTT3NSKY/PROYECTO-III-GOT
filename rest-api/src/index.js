@@ -1,13 +1,13 @@
 const express = require('express');
 const app = express();
-const cors = require('cors')
+//const cors = require('cors')
 
 // SETTINGS
 app.set('port', process.env.PORT || 3000);
 
 // MIDDLEWARES
 app.use(express.json());
-app.use(cors);
+//app.use(cors);
 
 // ROUTES
 app.use(require('./Routes/repositorios'));
