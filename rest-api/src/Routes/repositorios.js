@@ -50,12 +50,34 @@ router.get('/archivos/:id', (req, res) => {
 router.post('/repositorios', (req, res) => {
     const { id, nombre, arbol, gotignore} = req.body;
     console.log(req.body);
-    const query = `
-        CALL repositoryAddOrEdit(?, ?, ?, ?)
-    `;
+    const query = 'CALL repositoryAddOrEdit(?, ?, ?, ?)';
     mysqlConnection.query(query, [id, nombre, arbol, gotignore], (err, rows, fields) => {
         if(!err) {
             res.json({Status: 'Repositorio guardado'});
+        } else {
+            console.log(err);
+        }
+    });
+});
+
+router.put('/repositorios/:id', (req, res) => {
+    const { nombre, arbol, gotignore } = req.body;
+    const { id } = req.params;
+    const query = 'CALL repositoryAddOrEdit(?, ?, ?, ?)';
+    mysqlConnection.query(query, [id, nombre, arbol, gotignore], (err, row, fields) => {
+        if(!err){
+            res.json({Status: "Repositorio actualizado"});
+        } else {
+            console.log(err);
+        }
+    });
+});
+
+router.delete('/repositorios/:id', (req, res) => {
+    const { id } = req.params;
+    mysqlConnection.query('DELETE FROM repositorios WHERE id = ?', [id], (err, rows, fields) => {
+        if(!err) {
+            res.json({Status: "Repositorio eliminado"});
         } else {
             console.log(err);
         }
