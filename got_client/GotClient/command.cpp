@@ -88,15 +88,15 @@ void Command::init(std::string name)
 		std::cout << "No se permite crear repositorios sin nombre. Para obtener mas informacion acerca de un comando especifico, escriba \"got help <comando>\" \n";
 	}
 	else {
-		auto r = cpr::Post(cpr::Url{ "http://localhost:80/repositorios" },
-			cpr::Body{ R"({"id":"0", "nombre": name, "arbol":"", "gotignore":"" })" },
+		auto r = cpr::Post(cpr::Url{ "http://localhost:3000/repositorios" },
+			cpr::Body{ R"({ "id": 0, "nombre": "TEST5", "arbol": "TU PUTA MADREEEE", "gotignore": "TU PUTA MADREEEEx2"})" },
 			cpr::Header{ { "Content-Type", "application/json" } });
 		std::cout << "Se instancio un nuevo repositorio [" << name << "]";
 	}
 }
 void Command::add(std::string name) 
 {
-	cpr::Response r = cpr::Get(cpr::Url{ "http://localhost:80/get" });
+	cpr::Response r = cpr::Get(cpr::Url{ "http://localhost:3000/get" });
 	if (r.status_code >= 400) {
 		std::cout << "Favor inicializar un repositorio, utilize el comando got init para hacerlo";
 	}
