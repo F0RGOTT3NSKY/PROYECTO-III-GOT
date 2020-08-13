@@ -88,11 +88,31 @@ void Command::init(std::string name)
 		std::cout << "No se permite crear repositorios sin nombre. Para obtener mas informacion acerca de un comando especifico, escriba \"got help <comando>\" \n";
 	}
 	else {
+
 		std::cout << "Se instancio un nuevo repositorio [" << name << "]";
 	}
 }
 void Command::add(std::string name) 
 {
 
+}
+void Command::commit(std::string mensaje) 
+{
+
+}
+void Command::status(std::string file)
+{
+
+}
+void Command::rollback(std::string file, std::string commit)
+{
+
+}
+void Command::reset(std::string file)
+{
+
+}
+void Command::sync(std::string file)
+{
 
 }
