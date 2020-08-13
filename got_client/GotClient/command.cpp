@@ -98,56 +98,58 @@ void Command::add(std::string name)
 {
 	cpr::Response r = cpr::Get(cpr::Url{ "http://localhost:80/get" });
 	if (r.status_code >= 400) {
+		std::cout << "Favor inicializar un repositorio, utilize el comando got init para hacerlo";
 	}
 	else {
-		std::cout << "Favor inicializar un repositorio, utilize el comando got init para hacerlo";
 	}
 }
 void Command::commit(std::string mensaje) 
 {
 	cpr::Response r = cpr::Get(cpr::Url{ "http://localhost:80/get" });
 	if (r.status_code >= 400) {
+		std::cout << "Favor inicializar un repositorio, utilize el comando got init para hacerlo";
+	}
+	else {
 		auto r = cpr::Put(cpr::Url{ "http://localhost:80/repositorios/archivos/commit" },
 			cpr::Body{ R"({"id":"0", "nombre": name, "arbol":"", "gotignore":"" })" },
 			cpr::Header{ { "Content-Type", "application/json" } });
 		std::cout << "Commit realizado con el mensaje [" << mensaje << "]";
-	}
-	else {
-		std::cout << "Favor inicializar un repositorio, utilize el comando got init para hacerlo";
+
 	}
 }
 void Command::status(std::string file)
 {
 	cpr::Response r = cpr::Get(cpr::Url{ "http://localhost:80/get" });
 	if (r.status_code >= 400) {
-		auto r = cpr::Get(cpr::Url{ "http://localhost:80/repositorios/archivos/status" });
-		std::cout << "Estos son los cambios realizados en [" << file << "]";
+		std::cout << "Favor inicializar un repositorio, utilize el comando got init para hacerlo";
 	}
 	else {
 		std::cout << "Favor inicializar un repositorio, utilize el comando got init para hacerlo";
+		auto r = cpr::Get(cpr::Url{ "http://localhost:80/repositorios/archivos/status" });
+		std::cout << "Estos son los cambios realizados en [" << file << "]";
 	}
 }
 void Command::rollback(std::string file, std::string commit)
 {
 	cpr::Response r = cpr::Get(cpr::Url{ "http://localhost:80/get" });
 	if (r.status_code >= 400) {
+		std::cout << "Favor inicializar un repositorio, utilize el comando got init para hacerlo";
+	}
+	else {
+		std::cout << "Favor inicializar un repositorio, utilize el comando got init para hacerlo";
 		auto r = cpr::Put(cpr::Url{ "http://localhost:80/repositorios/archivos/rollback" },
 			cpr::Body{ R"({"id":"0", "nombre": name, "arbol":"", "gotignore":"" })" },
 			cpr::Header{ { "Content-Type", "application/json" } });
 		std::cout << "Se regreso el archivo [" << file << "] al commit [" << commit << "]";
-	}
-	else {
-		std::cout << "Favor inicializar un repositorio, utilize el comando got init para hacerlo";
 	}
 }
 void Command::reset(std::string file)
 {
 	cpr::Response r = cpr::Get(cpr::Url{ "http://localhost:80/get" });
 	if (r.status_code >= 400) {
-
+		std::cout << "Favor inicializar un repositorio, utilize el comando got init para hacerlo";
 	}
 	else {
-		std::cout << "Favor inicializar un repositorio, utilize el comando got init para hacerlo";
 	}
 
 }
@@ -155,10 +157,11 @@ void Command::sync(std::string file)
 {
 	cpr::Response r = cpr::Get(cpr::Url{ "http://localhost:80/get" });
 	if (r.status_code >= 400) {
-		auto r = cpr::Get(cpr::Url{ "http://localhost:80/repositorios/archivos/sync" });
-		std::cout << "Cambios sincronizados";
+		std::cout << "Favor inicializar un repositorio, utilize el comando got init para hacerlo";
 	}
 	else {
 		std::cout << "Favor inicializar un repositorio, utilize el comando got init para hacerlo";
+		auto r = cpr::Get(cpr::Url{ "http://localhost:80/repositorios/archivos/sync" });
+		std::cout << "Cambios sincronizados";
 	}
 }
