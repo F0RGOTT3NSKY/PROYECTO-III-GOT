@@ -100,15 +100,22 @@ void Command::add(std::string name)
 }
 void Command::commit(std::string mensaje) 
 {
-	auto r = cpr::Put(cpr::Url{ "http://localhost:80/repositorios/archivos" });
+	auto r = cpr::Put(cpr::Url{ "http://localhost:80/repositorios/archivos/commit" },
+		cpr::Body{ R"({"id":"0", "nombre": name, "arbol":"", "gotignore":"" })" },
+		cpr::Header{ { "Content-Type", "application/json" } });
+	std::cout << "Commit realizado con el mensaje [" << mensaje << "]";
 }
 void Command::status(std::string file)
 {
-	auto r = cpr::Get(cpr::Url{ "http://localhost:80/repositorios/archivos" });
+	auto r = cpr::Get(cpr::Url{ "http://localhost:80/repositorios/archivos/status" });
+	std::cout << "Estos son los cambios realizados en [" << file << "]";
 }
 void Command::rollback(std::string file, std::string commit)
 {
-	auto r = cpr::Put(cpr::Url{ "http://localhost:80/repositorios/archivos" });
+	auto r = cpr::Put(cpr::Url{ "http://localhost:80/repositorios/archivos/rollback" },
+		cpr::Body{ R"({"id":"0", "nombre": name, "arbol":"", "gotignore":"" })" },
+		cpr::Header{ { "Content-Type", "application/json" } });
+	std::cout << "Se regreso el archivo [" << file << "] al commit [" << commit << "]";
 }
 void Command::reset(std::string file)
 {
@@ -117,4 +124,5 @@ void Command::reset(std::string file)
 void Command::sync(std::string file)
 {
 	auto r = cpr::Get(cpr::Url{ "http://localhost:80/repositorios/archivos/sync" });
+	std::cout << "Cambios sincronizados";
 }
