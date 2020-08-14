@@ -3,6 +3,7 @@
 #include "cpr/cpr.h"
 
 std::string ID;
+std::string Directorio;
 
 Command::Command() 
 {
@@ -115,7 +116,21 @@ void Command::init(std::string name)
 		auto r = cpr::Post(cpr::Url{ "http://localhost:3000/repositorios" },
 			cpr::Body{ (BODY) },
 			cpr::Header{ { "Content-Type", "application/json" } });
-		std::cout << "Se instancio un nuevo repositorio [" << name << "]";
+		std::cout << "Se instancio un nuevo repositorio [" << name << "]" << "\n";
+	}
+	std::cout << "Ingrese un directorio:" << "\n";
+	std::cin >> Directorio;
+	DWORD ftyp = GetFileAttributesA(Directorio.c_str());
+	if (ftyp == INVALID_FILE_ATTRIBUTES) {
+		std::cout << "Hubo un problema a la hora de registrar el directorio " << "\n";
+	}
+
+	if (ftyp & FILE_ATTRIBUTE_DIRECTORY) {
+		std::cout << "El directorio se ha guardado" << "\n";
+	}
+	else {
+		std::cout << "Ingrese un directorio válido" << "\n";
+		auto r = cpr::Delete(cpr::Url{ "http://localhost:3000/repositorios/" + ID });
 	}
 }
 
@@ -141,13 +156,18 @@ void Command::select(std::string name)
 
 void Command::add(std::string name) 
 {
-	cpr::Response r = cpr::Get(cpr::Url{ "http://localhost:3000/repositorios" });
-	if (r.status_code >= 400) {
-		std::cout << "Favor inicializar un repositorio, utilize el comando got init para hacerlo";
-	}
-	else {
-		std::cout << r.url << std::endl;
-		std::cout << r.text << std::endl;
+	cpr::Response r = cpr::Get(cpr::Url{ "http://localhost:3000/archivos" });
+	std::string BODY = r.text.c_str();
+	std::size_t found = BODY.find(name);
+	std::string FileID;
+	if (found != std::string::npos) {
+		std::size_t found2 = BODY.find(",") - 1;
+		if (found2 == 7) {
+			FileID = BODY[7];
+		}
+		else {
+			FileID = BODY.substr(7, found2);
+		}
 	}
 }
 void Command::commit(std::string mensaje) 
