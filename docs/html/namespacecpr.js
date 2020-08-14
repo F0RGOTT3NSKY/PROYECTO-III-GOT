@@ -1,0 +1,25 @@
+var namespacecpr =
+[
+    [ "Authentication", "classcpr_1_1_authentication.html", "classcpr_1_1_authentication" ],
+    [ "Body", "classcpr_1_1_body.html", "classcpr_1_1_body" ],
+    [ "Buffer", "structcpr_1_1_buffer.html", "structcpr_1_1_buffer" ],
+    [ "CaseInsensitiveCompare", "structcpr_1_1_case_insensitive_compare.html", "structcpr_1_1_case_insensitive_compare" ],
+    [ "Cookies", "classcpr_1_1_cookies.html", "classcpr_1_1_cookies" ],
+    [ "CurlHolder", "structcpr_1_1_curl_holder.html", "structcpr_1_1_curl_holder" ],
+    [ "Digest", "classcpr_1_1_digest.html", "classcpr_1_1_digest" ],
+    [ "Error", "classcpr_1_1_error.html", "classcpr_1_1_error" ],
+    [ "File", "structcpr_1_1_file.html", "structcpr_1_1_file" ],
+    [ "LowSpeed", "classcpr_1_1_low_speed.html", "classcpr_1_1_low_speed" ],
+    [ "MaxRedirects", "classcpr_1_1_max_redirects.html", "classcpr_1_1_max_redirects" ],
+    [ "Multipart", "classcpr_1_1_multipart.html", "classcpr_1_1_multipart" ],
+    [ "Pair", "structcpr_1_1_pair.html", "structcpr_1_1_pair" ],
+    [ "Parameter", "structcpr_1_1_parameter.html", "structcpr_1_1_parameter" ],
+    [ "Parameters", "classcpr_1_1_parameters.html", "classcpr_1_1_parameters" ],
+    [ "Part", "structcpr_1_1_part.html", "structcpr_1_1_part" ],
+    [ "Payload", "classcpr_1_1_payload.html", "classcpr_1_1_payload" ],
+    [ "Proxies", "classcpr_1_1_proxies.html", "classcpr_1_1_proxies" ],
+    [ "Response", "classcpr_1_1_response.html", "classcpr_1_1_response" ],
+    [ "Session", "classcpr_1_1_session.html", "classcpr_1_1_session" ],
+    [ "Timeout", "classcpr_1_1_timeout.html", "classcpr_1_1_timeout" ],
+    [ "VerifySsl", "classcpr_1_1_verify_ssl.html", "classcpr_1_1_verify_ssl" ]
+];

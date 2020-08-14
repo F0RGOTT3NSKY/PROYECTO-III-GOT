@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['command_25',['Command',['../class_command.html#a18df2d81039392daeb0b78c346a70537',1,'Command']]],
-  ['command_5fdetection_26',['command_detection',['../class_aux.html#a5e4d8754e0ff2715935ba25b6e7686ba',1,'Aux']]],
-  ['command_5fdetector_27',['command_detector',['../class_aux.html#af2da637a587becc7adf33735c056aa65',1,'Aux']]],
-  ['commit_28',['commit',['../class_command.html#a06775833ad387f69f19fdb3d0bee34b6',1,'Command']]]
+  ['body_1743',['Body',['../classcpr_1_1_body.html#a70c3f57d92f24a9b2a85ee02a73018dc',1,'cpr::Body::Body()=default'],['../classcpr_1_1_body.html#a7d3a00d3f4c3414bd6fb0e1e64d57fd5',1,'cpr::Body::Body(const Body &amp;rhs)=default'],['../classcpr_1_1_body.html#af576e799dfc95f03a8ce9ff4f5a59a34',1,'cpr::Body::Body(Body &amp;&amp;rhs)=default'],['../classcpr_1_1_body.html#a5b22eeffffe22e57b9b2ffcabc605455',1,'cpr::Body::Body(const char *raw_string)'],['../classcpr_1_1_body.html#a96a6f5c4e951f3963dd3b1912a6531d3',1,'cpr::Body::Body(const char *raw_string, size_t length)'],['../classcpr_1_1_body.html#af901aa2dc3198f86362c42e53b5d128d',1,'cpr::Body::Body(size_t to_fill, char character)'],['../classcpr_1_1_body.html#aeecd4a1eefabcbff49bce322a1f7b41c',1,'cpr::Body::Body(const std::string &amp;std_string)'],['../classcpr_1_1_body.html#a9d113d5e3c37d9ed980284e6bbfdc1c1',1,'cpr::Body::Body(const std::string &amp;std_string, size_t position, size_t length=std::string::npos)'],['../classcpr_1_1_body.html#a44ba8827c0b3dab15152879e674d2ac9',1,'cpr::Body::Body(std::string &amp;&amp;std_string)'],['../classcpr_1_1_body.html#a1674f2f3299e661c0dfca9ecd9c6fe37',1,'cpr::Body::Body(std::initializer_list&lt; char &gt; il)'],['../classcpr_1_1_body.html#a676d2afa353522c7fee6ff9c3c423607',1,'cpr::Body::Body(InputIterator first, InputIterator last)']]],
+  ['buffer_1744',['Buffer',['../structcpr_1_1_buffer.html#aa08522f08ea9527b2538fb6389b17497',1,'cpr::Buffer']]]
 ];
