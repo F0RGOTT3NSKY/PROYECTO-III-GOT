@@ -51,8 +51,10 @@ void GotClient::main()
 			command.reset(aux.phase3);
 		case aux.sync:
 			command.sync(aux.phase3);
+		case aux.select:
+			command.select(aux.phase3);
 		default:
-			std::cout << "El programa no admite este comando. Pruebe con" << "\033[33m" << " got help " << "\033[0m" << "para ver los comandos disponibles.\n> ";
+			std::cout << "> ";
 			break;
 		}
 	}
