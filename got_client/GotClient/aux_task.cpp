@@ -95,6 +95,7 @@ Aux::string_code Aux::command_detection(std::string inputcommand)
 		if (phase1 == "got" && phase2 == "rollback" && phase3 != "" && phase4 != "") return rollback;
 		if (phase1 == "got" && phase2 == "reset" && phase3 != "" && phase4 == "") return reset;
 		if (phase1 == "got" && phase2 == "sync" && phase3 != "" && phase4 == "") return sync;
+		if (phase1 == "got" && phase2 == "select" && phase3 != "" && phase4 == "") return select;
 		else return invalid;
 	}
 	else 
@@ -111,5 +112,6 @@ Aux::string_code Aux::command_detector(std::string inputcommand) {
 	if (inputcommand == "rollback") return rollback;
 	if (inputcommand == "reset") return reset;
 	if (inputcommand == "sync") return sync;
+	if (inputcommand == "select") return select;
 	else return invalid;
 }

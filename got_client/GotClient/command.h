@@ -61,6 +61,8 @@ public:
 	@param string file
 	*/
 	void sync(std::string file);
+
+	void select(std::string name);
 private:
 
 };

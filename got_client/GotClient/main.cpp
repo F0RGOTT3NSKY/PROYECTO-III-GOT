@@ -1,9 +1,14 @@
 #include "main.h"
 #include "command.h"
 #include "aux_task.h"
+#include <iostream>
+#include "md5.h"
+
+using std::cout; using std::endl;
 
 int main() {
 	GotClient client;
+	cout << "md5 of 'grape': " << md5("1") << endl;
 	client.main();
 }
 
@@ -46,8 +51,10 @@ void GotClient::main()
 			command.reset(aux.phase3);
 		case aux.sync:
 			command.sync(aux.phase3);
+		case aux.select:
+			command.select(aux.phase3);
 		default:
-			std::cout << "El programa no admite este comando. Pruebe con" << "\033[33m" << " got help " << "\033[0m" << "para ver los comandos disponibles.\n> ";
+			std::cout << "> ";
 			break;
 		}
 	}

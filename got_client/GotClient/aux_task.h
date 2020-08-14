@@ -38,6 +38,7 @@ public:
 		rollback,
 		reset,
 		sync,
+		select,
 		invalid,
 	};
 	/**

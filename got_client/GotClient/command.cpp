@@ -2,6 +2,8 @@
 #include "aux_task.h"
 #include "cpr/cpr.h"
 
+std::string ID;
+
 Command::Command() 
 {
 	//Default constructor
@@ -106,15 +108,40 @@ void Command::init(std::string name)
 		std::cout << "especifico, escriba" << "\033[33m" << " got help init" << "\033[0m" << "\n> ";
 	}
 	else {
+		std::string id = " {\"id\": 0, \"nombre\": ";
+		std::string nombre = "\"" + name + "\"" + ", \"arbol\": \"TU PUTA MADRE\", \"gotignore\": \"TU PUTA MADRE\"} ";
+		std::string BODY = id + nombre;
+
 		auto r = cpr::Post(cpr::Url{ "http://localhost:3000/repositorios" },
-			cpr::Body{ R"({ "id": 0, "nombre": "TEST5", "arbol": "TU PUTA MADREEEE", "gotignore": "TU PUTA MADREEEEx2"})" },
+			cpr::Body{ (BODY) },
 			cpr::Header{ { "Content-Type", "application/json" } });
 		std::cout << "Se instancio un nuevo repositorio [" << name << "]";
 	}
 }
+
+void Command::select(std::string name)
+{
+	cpr::Response r = cpr::Get(cpr::Url{ "http://localhost:3000/repositorios" });
+	std::string BODY = r.text.c_str();
+	std::size_t found = BODY.find(name);
+	if (found != std::string::npos) {
+		std::cout << "Se ha encontrado " << name << "\n";
+		std::size_t found2 = BODY.find(",") - 1;
+		if (found2 == 7) {
+			ID = BODY[7];
+		}
+		else {
+			ID = BODY.substr(7, found2);
+		}
+	}
+	else {
+		std::cout << "El repositorio \"" << name << "\" no se pudo encontrar en la base de datos" << "\n";
+	}
+}
+
 void Command::add(std::string name) 
 {
-	cpr::Response r = cpr::Get(cpr::Url{ "http://localhost:3000/get" });
+	cpr::Response r = cpr::Get(cpr::Url{ "http://localhost:3000/repositorios" });
 	if (r.status_code >= 400) {
 		std::cout << "Favor inicializar un repositorio, utilize el comando got init para hacerlo";
 	}
