@@ -1,0 +1,7 @@
+﻿  aux_task.cpp
+  command.cpp
+  main.cpp
+  md5.cpp
+C:\GitHub\PROYECTO-III-GOT\got_client\GotClient\md5.cpp(114,39): warning C4267: 'argument': conversion from 'size_t' to 'MD5::size_type', possible loss of data
+C:\GitHub\PROYECTO-III-GOT\got_client\GotClient\md5.cpp(342,9): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Generating Code...

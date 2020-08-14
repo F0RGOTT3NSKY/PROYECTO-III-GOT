@@ -1,15 +1,17 @@
 #include "command.h"
 #include "aux_task.h"
 #include "cpr/cpr.h"
+#include <list>
 
 std::string ID;
 std::string Directorio;
+std::list<std::list<std::string>> ArchivosAgregados;
 
-Command::Command() 
+Command::Command()
 {
 	//Default constructor
 }
-void Command::help() 
+void Command::help()
 {
 	std::cout << "Para obtener mas informacion acerca de un comando especifico, escriba \"got help <comando>\" \n\n";
 	std::cout << "init" << "\t\t" << "Instancia un nuevo repositorio en el servidor.\n";
@@ -97,7 +99,7 @@ void Command::help_command(std::string command)
 		std::cout << "     file\tNombre del archivo.\n\n> ";
 		break;
 	default:
-		std::cout << "El programa de ayuda no admite este comando. Pruebe con" <<"\033[33m" <<" got help "<< "\033[0m" << "para ver los comandos disponibles.\n> ";
+		std::cout << "El programa de ayuda no admite este comando. Pruebe con" << "\033[33m" << " got help " << "\033[0m" << "para ver los comandos disponibles.\n> ";
 		break;
 	}
 
@@ -154,23 +156,44 @@ void Command::select(std::string name)
 	}
 }
 
-void Command::add(std::string name) 
+void Command::add(std::string name)
 {
 	cpr::Response r = cpr::Get(cpr::Url{ "http://localhost:3000/archivos" });
 	std::string BODY = r.text.c_str();
 	std::size_t found = BODY.find(name);
 	std::string FileID;
+	std::list<std::string> archivo;
 	if (found != std::string::npos) {
 		std::size_t found2 = BODY.find(",") - 1;
 		if (found2 == 7) {
 			FileID = BODY[7];
+			archivo.push_back(FileID);
+			archivo.push_back(ID);
+			archivo.push_back(name);
+			archivo.push_back(Directorio);
+			archivo.push_back("CONTENIDO");
+			ArchivosAgregados.push_back(archivo);
 		}
 		else {
 			FileID = BODY.substr(7, found2);
+			archivo.push_back(FileID);
+			archivo.push_back(ID);
+			archivo.push_back(name);
+			archivo.push_back(Directorio);
+			archivo.push_back("CONTENIDO");
+			ArchivosAgregados.push_back(archivo);
 		}
 	}
+	else {
+		archivo.push_back("0");
+		archivo.push_back(ID);
+		archivo.push_back(name);
+		archivo.push_back(Directorio);
+		archivo.push_back("CONTENIDO");
+		ArchivosAgregados.push_back(archivo);
+	}
 }
-void Command::commit(std::string mensaje) 
+void Command::commit(std::string mensaje)
 {
 	cpr::Response r = cpr::Get(cpr::Url{ "http://localhost:80/get" });
 	if (r.status_code >= 400) {
