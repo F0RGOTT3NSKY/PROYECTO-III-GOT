@@ -1,9 +1,14 @@
 #include "main.h"
 #include "command.h"
 #include "aux_task.h"
+#include <iostream>
+#include "md5.h"
+
+using std::cout; using std::endl;
 
 int main() {
 	GotClient client;
+	cout << "md5 of 'grape': " << md5("1") << endl;
 	client.main();
 }
 
