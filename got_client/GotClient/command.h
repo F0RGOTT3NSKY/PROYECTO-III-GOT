@@ -3,7 +3,7 @@
 
 #include <string>
 #include <iostream>
-
+#include <Windows.h>
 
 class Command
 {
