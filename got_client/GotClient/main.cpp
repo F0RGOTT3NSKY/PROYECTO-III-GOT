@@ -36,8 +36,18 @@ void GotClient::main()
 			break;
 		case aux.add:
 			command.add(aux.phase3);
+		case aux.commit:
+			command.commit(aux.phase3);
+		case aux.status:
+			command.status(aux.phase3);
+		case aux.rollback:
+			command.rollback(aux.phase3, aux.phase4);
+		case aux.reset:
+			command.reset(aux.phase3);
+		case aux.sync:
+			command.sync(aux.phase3);
 		default:
-			std::cout << "El programa no admite este comando. Pruebe con" << "\033[33m" << " got help " << "\033[0m" << "para ver los comandos disponibles.\n";
+			std::cout << "El programa no admite este comando. Pruebe con" << "\033[33m" << " got help " << "\033[0m" << "para ver los comandos disponibles.\n> ";
 			break;
 		}
 	}

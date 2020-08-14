@@ -86,10 +86,15 @@ Aux::string_code Aux::command_detection(std::string inputcommand)
 			break;
 		}
 		//std::cout << "Phase_1 = " << phase1 << "\nPhase_2 = " << phase2 << "\nPhase_3 = " << phase3 << "\nPhase_4 = " << phase4 << "\n";
-		if (phase1 == "got" && phase2 == "help" && phase3 == "") return help;
-		if (phase1 == "got" && phase2 == "help" && phase3 != "") return help_command;
-		if (phase2 == "init") return init;
-		if (phase1 == "got" && phase2 == "add" && phase3 != "") return add;
+		if (phase1 == "got" && phase2 == "help" && phase3 == "" && phase4 == "") return help;
+		if (phase1 == "got" && phase2 == "help" && phase3 != "" && phase4 == "") return help_command;
+		if (phase1 == "got" && phase2 == "init" && phase3 != "" && phase4 == "") return init;
+		if (phase1 == "got" && phase2 == "add" && phase3 != "" && phase4 == "") return add;
+		if (phase1 == "got" && phase2 == "commit" && phase3 != "" && phase4 == "") return commit;
+		if (phase1 == "got" && phase2 == "status" && phase3 != "" && phase4 == "") return status;
+		if (phase1 == "got" && phase2 == "rollback" && phase3 != "" && phase4 != "") return rollback;
+		if (phase1 == "got" && phase2 == "reset" && phase3 != "" && phase4 == "") return reset;
+		if (phase1 == "got" && phase2 == "sync" && phase3 != "" && phase4 == "") return sync;
 		else return invalid;
 	}
 	else 
