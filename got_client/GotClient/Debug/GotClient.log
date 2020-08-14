@@ -1,7 +1,4 @@
-﻿  aux_task.cpp
-  command.cpp
+﻿  command.cpp
   main.cpp
-  md5.cpp
   Generando código...
-  LINK : no se encontró C:\GitHub\PROYECTO-III-GOT\got_client\Debug\GotClient.exe o no lo generó el último vínculo incremental; ejecutando vínculo completo
   GotClient.vcxproj -> C:\GitHub\PROYECTO-III-GOT\got_client\Debug\GotClient.exe
